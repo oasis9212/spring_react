@@ -1,5 +1,7 @@
 import {useEffect, useState} from "react";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import axios from "axios";
+import Jeon from "./Jeon";
 
 function App() {
     const [hello, setHello] = useState('');
@@ -12,9 +14,16 @@ function App() {
             .catch((error)=> console.log(error))
     }, []);
     return (
-        <div className="App">
-            백엔드 데이터 : {hello}
-        </div>
+         <BrowserRouter>
+            <div className="App">
+                백엔드 데이터 : {hello}
+            </div>
+            <Routes>
+            <Route path="/jeon" element={<Jeon/>}/>
+
+            </Routes>
+         </BrowserRouter>
+        
     );
 }
 
