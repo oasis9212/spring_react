@@ -1,6 +1,6 @@
 package com.example.rest;
 
-
+import com.example.note.service.NoteRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,4 +10,5 @@ public class apitescontroller {
     public String hello(){
         return "jeon hello";
     }
+
 }

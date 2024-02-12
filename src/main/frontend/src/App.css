@@ -19,21 +19,7 @@ header ul>li {
 
 header nav ul li:hover {
   background-color: red;
-  color: blue;
+  color: green;
   cursor: pointer;
  
-}
-
-header nav ul ul {
-  display: none;
-  /* 초기에는 하위 메뉴 숨김 */
-  position: absolute;
-  background-color: chartreuse;
-  /* 하위 메뉴 배경색 설정 */
-  padding: 2px;
-}
-
-header nav ul li:hover ul {
-  display: block;
-  /* 호버 시 하위 메뉴 보여줌 */
 }

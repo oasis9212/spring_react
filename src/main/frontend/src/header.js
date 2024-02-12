@@ -1,26 +1,48 @@
 
-import App from "./App";
-import jeon from "./Jeon";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const StyledHeader = styled.header`
+    background-color: #666;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+`;
+
+const StyledNav = styled.nav`
+    ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    li {
+        margin: 0 10px;
+        cursor: pointer;
+        color: green;
+    }
+
+    li:hover {
+        text-decoration: underline;
+    }
+`;
+
 const Header = () => {
 
     return (
         <div class="page">
-            <header>
-                <h2>개인적인 블로그 </h2>
-                <nav>
+            <StyledHeader>
+                <h2>알고리즘 / JPA / react </h2>
+                <StyledNav>
                     <ul>
-                        <li>자기소개
-                             <ul>
-                                <li><a href="/jeon"> 전건수 </a></li>
-                                <li>김선혁</li>
-                            </ul>
-                        </li>
-
-                        <li>게시판</li>
-                        
+                        {/* <li><Link to="/algorithm">알고리즘</Link></li> */}
+                        <li><Link to="/jpa">JPA</Link></li>
+                        {/* <li><Link to="/react">React</Link></li> */}
                     </ul>
-                </nav>
-            </header>
+                </StyledNav>
+            </StyledHeader>
         </div>
 
  
